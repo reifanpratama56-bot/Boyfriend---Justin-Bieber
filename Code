@@ -1,0 +1,36 @@
+import sys
+import time
+
+def jalanin_lirik():
+    lirik = [
+        ("So give me a chance ", 0.1, 0.2),
+        ("Cause you're all i need ", 0.1, 0.1),
+        ("Girl ", 0.1, 0.4),
+        ("Spend a week with your boy ", 0.05, 0.01),
+        ("I'll be calling you my girlfriend ", 0.05, 0.8),
+        ("If i was your man (if i was your man) ", 0.08, 0.1),
+        ("I'd never leave ", 0.08, 0.2),
+        ("You girl ", 0.08, 0.9),
+        ("I just want to love you ", 0.08, 0.01),
+        ("And treat you right ", 0.07, 0.4),
+        
+    ]
+
+    print("\n== Boyfriend - Justin Bieber ==")
+    time.sleep(1.0)
+
+    for baris_lagu, delay_karakter, delay_setelah in lirik:
+
+        # Efek mengetik per karakter
+        for karakter in baris_lagu:
+            print(karakter, end="")
+            sys.stdout.flush()
+            time.sleep(delay_karakter)
+
+        # Jeda mengikuti perpindahan nada/lirik
+        time.sleep(delay_setelah)
+        print("")
+
+    print("// Code by Fanncode")
+
+jalanin_lirik()
